@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls \"C:/Users/kdada/OneDrive/Desktop/Maximum Website Update/services/\"*.html)",
+      "WebFetch(domain:webcache.googleusercontent.com)"
+    ]
+  }
+}
