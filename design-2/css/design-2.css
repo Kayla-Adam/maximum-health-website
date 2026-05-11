@@ -1,0 +1,519 @@
+/* ============================================
+   Design 2: Calmino-Inspired
+   Sophisticated, earthy, premium
+   Teal primary, cream backgrounds, gold accents
+   Brandon Grotesque + Avenir feel
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;1,6..12,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+:root {
+  /* Colors — Earthy & sophisticated */
+  --color-primary: #2A7C6F;
+  --color-primary-dark: #1E5C52;
+  --color-primary-light: #3A9C8C;
+  --color-secondary: #B8A88A;
+  --color-secondary-light: #D4C9B3;
+  --color-accent: #D4A843;
+  --color-text: #3D3D3D;
+  --color-text-light: #6B6B6B;
+  --color-text-muted: #9B9B9B;
+  --color-heading: #2A2A2A;
+  --color-bg: #FFFEFC;
+  --color-bg-alt: #F5F0EB;
+  --color-bg-dark: #2A2A2A;
+  --color-border: #E8E0D6;
+  --color-white: #ffffff;
+  --color-black: #2A2A2A;
+
+  /* Typography — Elegant serif + clean sans */
+  --font-heading: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-body: 'Nunito Sans', 'Segoe UI', Roboto, sans-serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-md: 1.125rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 2rem;
+  --font-size-3xl: 2.625rem;
+  --font-size-4xl: 3.25rem;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Spacing — Generous */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 5rem;
+  --spacing-4xl: 7rem;
+
+  /* Borders — Softer */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* Shadows — Warm toned */
+  --shadow-sm: 0 2px 8px rgba(42, 42, 42, 0.06);
+  --shadow-md: 0 4px 20px rgba(42, 42, 42, 0.08);
+  --shadow-lg: 0 8px 40px rgba(42, 42, 42, 0.1);
+
+  /* Transitions */
+  --transition: 0.4s ease;
+  --transition-fast: 0.2s ease;
+  --transition-slow: 0.6s ease;
+}
+
+/* ---- GLOBAL OVERRIDES ---- */
+
+body {
+  background-color: var(--color-bg);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-semibold);
+}
+
+p {
+  line-height: 1.85;
+}
+
+/* ---- ANIMATIONS ---- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.section__header,
+.service-card,
+.team-card,
+.process-step,
+.trust-badge,
+.benefit-item,
+.certification {
+  animation: fadeInUp 0.8s ease both;
+}
+
+.section:nth-child(odd) .service-card:nth-child(1),
+.section:nth-child(odd) .team-card:nth-child(1) { animation-delay: 0.1s; }
+.section:nth-child(odd) .service-card:nth-child(2),
+.section:nth-child(odd) .team-card:nth-child(2) { animation-delay: 0.2s; }
+.section:nth-child(odd) .service-card:nth-child(3),
+.section:nth-child(odd) .team-card:nth-child(3) { animation-delay: 0.3s; }
+.section:nth-child(odd) .service-card:nth-child(4),
+.section:nth-child(odd) .team-card:nth-child(4) { animation-delay: 0.4s; }
+
+/* ---- BUTTONS — Elegant, gold accent on hover ---- */
+.btn {
+  border-radius: var(--radius-md);
+  padding: 0.85rem 2rem;
+  font-family: var(--font-body);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-sm);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  transition: all var(--transition);
+}
+
+.btn--lg {
+  padding: 1.1rem 2.75rem;
+  font-size: var(--font-size-sm);
+}
+
+.btn--sm {
+  padding: 0.6rem 1.5rem;
+  font-size: var(--font-size-xs);
+}
+
+.btn--primary {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.btn--primary:hover {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-white);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(212, 168, 67, 0.3);
+}
+
+.btn--secondary:hover {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  transform: translateY(-1px);
+}
+
+.btn--white {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+  border-color: var(--color-white);
+}
+
+.btn--white:hover {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-white);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(212, 168, 67, 0.3);
+}
+
+/* ---- HEADER — Warm, cream tinted ---- */
+.header {
+  background: var(--color-bg);
+  box-shadow: none;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.header__inner {
+  height: 85px;
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-xl);
+  color: var(--color-primary);
+}
+
+.nav__link {
+  font-family: var(--font-body);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-sm);
+  letter-spacing: 0.02em;
+}
+
+.nav__link:hover,
+.nav__link--active {
+  color: var(--color-primary);
+}
+
+.dropdown {
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+}
+
+.dropdown__link:hover {
+  background: var(--color-bg-alt);
+  color: var(--color-primary);
+}
+
+/* ---- HERO — Earthy gradient ---- */
+.hero {
+  min-height: 80vh;
+}
+
+.hero::before {
+  background: linear-gradient(145deg, rgba(42, 124, 111, 0.88) 0%, rgba(42, 42, 42, 0.75) 100%);
+}
+
+.hero__title {
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.15;
+}
+
+.hero__title em {
+  color: var(--color-accent);
+  font-style: italic;
+}
+
+.hero__subtitle {
+  font-weight: var(--font-weight-light);
+  font-size: var(--font-size-md);
+  max-width: 580px;
+  line-height: 1.8;
+}
+
+/* ---- PAGE BANNER — Teal gradient ---- */
+.page-banner {
+  background: linear-gradient(145deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  padding: var(--spacing-4xl) 0 var(--spacing-3xl);
+}
+
+.page-banner__title {
+  font-family: var(--font-heading);
+}
+
+/* ---- SECTIONS — Warm backgrounds ---- */
+.section--alt {
+  background-color: var(--color-bg-alt);
+}
+
+.section {
+  padding: var(--spacing-4xl) 0;
+}
+
+.section__header h2 {
+  position: relative;
+  display: inline-block;
+}
+
+.section__header h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: var(--color-accent);
+  border-radius: 2px;
+}
+
+.section__header {
+  margin-bottom: var(--spacing-3xl);
+  padding-bottom: var(--spacing-lg);
+}
+
+/* ---- TRUST BAR — Gold numbers ---- */
+.trust-badge__number {
+  color: var(--color-primary);
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-bold);
+}
+
+.trust-badge__label {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+/* ---- CARDS — Warm shadows, rounded ---- */
+.service-card {
+  border: none;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition);
+  background: var(--color-white);
+}
+
+.service-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-6px);
+}
+
+.service-card__icon {
+  background: var(--color-bg-alt);
+  color: var(--color-primary);
+  border-radius: var(--radius-lg);
+}
+
+.service-card__title {
+  font-family: var(--font-heading);
+}
+
+.team-card {
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+  border: none;
+  overflow: hidden;
+  transition: all var(--transition);
+}
+
+.team-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-6px);
+}
+
+.team-card__name {
+  font-family: var(--font-heading);
+}
+
+.team-card__role {
+  color: var(--color-primary);
+}
+
+/* ---- PROCESS STEPS — Gold numbers ---- */
+.process-step__number {
+  background: var(--color-primary);
+  width: 65px;
+  height: 65px;
+  font-family: var(--font-heading);
+  font-size: var(--font-size-xl);
+}
+
+.process-step__title {
+  font-family: var(--font-heading);
+}
+
+/* ---- PROFILE PAGE — Refined ---- */
+.profile__photo {
+  border-radius: var(--radius-xl);
+}
+
+.profile__name {
+  font-family: var(--font-heading);
+}
+
+.profile__credentials {
+  color: var(--color-primary);
+}
+
+.profile__section-title {
+  font-family: var(--font-heading);
+  border-bottom: 3px solid var(--color-accent);
+}
+
+.certification {
+  border-left: 3px solid var(--color-accent);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-alt);
+}
+
+.certification__icon {
+  background: var(--color-primary);
+}
+
+.specialty-tag {
+  border-radius: var(--radius-full);
+  border-color: var(--color-border);
+  font-weight: var(--font-weight-medium);
+  transition: all var(--transition-fast);
+}
+
+.specialty-tag:hover {
+  background: var(--color-primary);
+  color: var(--color-white);
+  border-color: var(--color-primary);
+}
+
+/* ---- PROFILE CTA — Teal with gold accent ---- */
+.profile__cta {
+  background: linear-gradient(145deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  border-radius: var(--radius-xl);
+}
+
+/* ---- SECTION DARK — Deep charcoal ---- */
+.section--dark {
+  background-color: var(--color-bg-dark);
+}
+
+.section--dark h2 {
+  color: var(--color-white);
+}
+
+.section--dark h2::after {
+  background: var(--color-accent);
+}
+
+/* ---- FOOTER — Dark with gold links on hover ---- */
+.footer {
+  background: var(--color-bg-dark);
+}
+
+.footer__logo {
+  font-family: var(--font-heading);
+}
+
+.footer__heading {
+  font-family: var(--font-heading);
+}
+
+.footer__link:hover {
+  color: var(--color-accent);
+}
+
+.footer__social a:hover {
+  color: var(--color-accent);
+}
+
+/* ---- ACCORDION ---- */
+.accordion {
+  border-radius: var(--radius-lg);
+  border-color: var(--color-border);
+}
+
+.accordion__trigger:hover {
+  background: var(--color-bg-alt);
+}
+
+/* ---- CARDS GENERAL ---- */
+.card {
+  border-radius: var(--radius-xl);
+  border: none;
+  box-shadow: var(--shadow-sm);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+.card__link {
+  color: var(--color-primary);
+}
+
+.card__link:hover {
+  color: var(--color-accent);
+}
+
+/* ---- BREADCRUMB ---- */
+.breadcrumb a:hover {
+  color: var(--color-accent);
+}
+
+/* ---- BLOCKQUOTE ---- */
+blockquote {
+  border-left-color: var(--color-accent);
+  background: var(--color-bg-alt);
+}
+
+/* ---- SERVICE DETAIL ---- */
+.service-detail__content ul li::before {
+  background: var(--color-accent);
+}
+
+.benefit-item {
+  background: var(--color-bg-alt);
+  border-radius: var(--radius-lg);
+}
+
+.benefit-item__icon {
+  background: var(--color-primary);
+}
+
+.service-cta {
+  background: var(--color-bg-alt);
+  border-radius: var(--radius-xl);
+}
+
+/* ---- CONTACT FORM ---- */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  border-color: var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+  border-color: var(--color-primary);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(42, 124, 111, 0.15);
+}
