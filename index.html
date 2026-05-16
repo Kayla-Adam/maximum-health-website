@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Maximum Health Wellness Centre | Massage Therapy Calgary</title>
+  <title>Maximum Health Massage Therapy Calgary | Massage Therapy Calgary</title>
   <meta name="description" content="Reduce pain, calm nerves, and get back to what really moves you. Calgary's trusted massage therapy clinic with 28 years of experience and 6,222+ clients served.">
-  <meta property="og:title" content="Maximum Health Wellness Centre | Massage Therapy Calgary">
+  <meta property="og:title" content="Maximum Health Massage Therapy Calgary | Massage Therapy Calgary">
   <meta property="og:description" content="Therapeutic massage focused on lasting results. 28 years in business, 91% first-time client retention.">
   <meta property="og:type" content="website">
   <link rel="stylesheet" href="/css/variables.css">
@@ -19,26 +19,27 @@
   <link rel="stylesheet" href="/css/team.css">
   <link rel="stylesheet" href="/css/services.css">
   <link rel="stylesheet" href="/css/responsive.css">
+  <link rel="stylesheet" href="/css/theme.css">
 </head>
 <body>
 
   <!-- Header -->
   <header class="header">
     <div class="header__inner">
-      <a href="/" class="logo">Maximum Health</a>
+      <a href="/" class="logo"><img src="/images/logo.avif" alt="Maximum Health Massage Therapy Calgary"></a>
       <button class="menu-toggle" aria-label="Toggle menu">
         <span class="menu-toggle__bar"></span>
         <span class="menu-toggle__bar"></span>
         <span class="menu-toggle__bar"></span>
       </button>
       <nav class="nav" aria-label="Main navigation">
-        <div class="nav__item">
-          <a href="/" class="nav__link nav__link--active">Home</a>
-        </div>
+        <div class="nav__item"><a href="/" class="nav__link nav__link--active">Home</a></div>
         <div class="nav__item">
           <a href="/about-us/" class="nav__link nav__link--has-dropdown">About</a>
           <div class="dropdown">
             <a href="/about-us/" class="dropdown__link">About Us</a>
+            <a href="/review-us/" class="dropdown__link">Reviews</a>
+            <a href="/join-our-team/" class="dropdown__link">Join Our Team</a>
           </div>
         </div>
         <div class="nav__item">
@@ -74,12 +75,8 @@
             <a href="/our-team/mike.html" class="dropdown__link">Mike Viani</a>
           </div>
         </div>
-        <div class="nav__item">
-          <a href="/contact/" class="nav__link">Contact</a>
-        </div>
-        <div class="nav__item">
-          <a href="/blog/" class="nav__link">Blog</a>
-        </div>
+        <div class="nav__item"><a href="/contact/" class="nav__link">Contact</a></div>
+        <div class="nav__item"><a href="/blog/" class="nav__link">Blog</a></div>
       </nav>
       <a href="https://maximumhealth.janeapp.com/" class="btn btn--primary btn--sm header__cta" target="_blank" rel="noopener">Book Now</a>
     </div>
@@ -99,7 +96,7 @@
           </div>
         </div>
         <div class="hero__image">
-          <img src="/images/hero/couple-running.png" alt="Active couple jogging outdoors by a lake" loading="lazy">
+          <img src="/images/hero-couple-running.png" alt="Active couple jogging outdoors by a lake" loading="lazy">
         </div>
       </div>
     </div>
@@ -138,32 +135,44 @@
       </div>
       <div class="services-grid">
         <a href="/services/deep-tissue-therapeutic.html" class="service-card">
-          <div class="service-card__icon">&#9899;</div>
+          <div class="service-card__icon" aria-hidden="true">
+            <img src="/images/icon-neckpain.png" alt="" style="width: 38px; height: 38px; object-fit: contain;">
+          </div>
           <h3 class="service-card__title">Back, Neck &amp; Shoulder Pain</h3>
           <p class="service-card__text">Targeted therapeutic massage to release tension, correct postural imbalances, and restore comfortable movement in these commonly affected areas.</p>
         </a>
         <a href="/services/lymphatic-drainage.html" class="service-card">
-          <div class="service-card__icon">&#9899;</div>
+          <div class="service-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" style="fill: currentColor; stroke: none;"><path d="M8 3 C 5.5 7 5 9 5 10.5 A 3 3 0 0 0 11 10.5 C 11 9 10.5 7 8 3 Z"/><path d="M16.5 8 C 14.5 11.5 14 13.2 14 14.5 A 2.5 2.5 0 0 0 19 14.5 C 19 13.2 18.5 11.5 16.5 8 Z"/><path d="M10.5 14 C 9 16.8 8.6 18.2 8.6 19.2 A 1.9 1.9 0 0 0 12.4 19.2 C 12.4 18.2 12 16.8 10.5 14 Z"/></svg>
+          </div>
           <h3 class="service-card__title">Lymphatic Drainage</h3>
           <p class="service-card__text">Gentle, rhythmic massage that stimulates your lymphatic system to reduce swelling, boost immune function, and support post-surgical recovery.</p>
         </a>
         <a href="/services/sports-injury-rehabilitation.html" class="service-card">
-          <div class="service-card__icon">&#9899;</div>
+          <div class="service-card__icon" aria-hidden="true">
+            <img src="/images/icon-running.png" alt="" style="width: 38px; height: 38px; object-fit: contain;">
+          </div>
           <h3 class="service-card__title">Sports Injuries</h3>
           <p class="service-card__text">Recover faster and prevent re-injury with targeted rehabilitation massage designed for active individuals and athletes.</p>
         </a>
         <a href="/services/deep-tissue-therapeutic.html" class="service-card">
-          <div class="service-card__icon">&#9899;</div>
+          <div class="service-card__icon" aria-hidden="true">
+            <img src="/images/icon-tension.png" alt="" style="width: 38px; height: 38px; object-fit: contain;">
+          </div>
           <h3 class="service-card__title">Chronic Tension</h3>
           <p class="service-card__text">Break the cycle of persistent muscle tightness with whole-body assessment and personalized treatment plans.</p>
         </a>
         <a href="/services/myofascial-release.html" class="service-card">
-          <div class="service-card__icon">&#9899;</div>
+          <div class="service-card__icon" aria-hidden="true">
+            <img src="/images/icon-cane.png" alt="" style="width: 38px; height: 38px; object-fit: contain;">
+          </div>
           <h3 class="service-card__title">Mobility Restrictions</h3>
           <p class="service-card__text">Restore range of motion through myofascial release, joint mobilization, and targeted stretching techniques.</p>
         </a>
         <a href="/services/pre-post-natal.html" class="service-card">
-          <div class="service-card__icon">&#9899;</div>
+          <div class="service-card__icon" aria-hidden="true">
+            <img src="/images/icon-pregnant.png" alt="" style="width: 38px; height: 38px; object-fit: contain;">
+          </div>
           <h3 class="service-card__title">Pre &amp; Post Natal Massage</h3>
           <p class="service-card__text">Specialized care for expecting and new mothers, addressing pregnancy-related discomfort and supporting postpartum recovery with safe, adapted techniques.</p>
         </a>
@@ -209,13 +218,11 @@
       <div class="grid grid-2" style="align-items: center;">
         <div>
           <h2>Calgary's Trusted Wellness Centre</h2>
-          <p>For nearly three decades, Maximum Health Wellness Centre has been helping Calgarians live with less pain and more freedom. Located in the heart of NW Calgary near Kensington, our multi-disciplinary clinic brings together registered massage therapists, acupuncturists, osteopaths, and more &mdash; all under one roof.</p>
+          <p>For nearly three decades, Maximum Health Massage Therapy Calgary has been helping Calgarians live with less pain and more freedom. Located in the heart of NW Calgary near Kensington, our multi-disciplinary clinic brings together registered massage therapists, acupuncturists, osteopaths, and more &mdash; all under one roof.</p>
           <p>We believe in treating the whole person, not just the symptom. Every treatment begins with listening, understanding your goals, and building a plan that empowers you to take control of your health.</p>
           <a href="/about-us/" class="btn btn--primary">Learn More About Us</a>
         </div>
-        <div class="img-placeholder" style="aspect-ratio: 4/3; border-radius: var(--radius-lg);">
-          Clinic Photo
-        </div>
+        <div style="aspect-ratio: 4/3; border-radius: var(--radius-lg); overflow: hidden;"><img src="/images/clinic-exterior.avif" alt="Maximum Health Massage Therapy Calgary storefront on 19 St NW" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy"></div>
       </div>
     </div>
   </section>
@@ -229,7 +236,7 @@
       </div>
       <div class="grid grid-4">
         <a href="/our-team/brooklyn-brolly.html" class="team-card">
-          <div class="team-card__image img-placeholder">Photo</div>
+          <div class="team-card__image"><img src="/images/team/brooklyn-brolly.jpg" alt="Brooklyn Brolly portrait" loading="lazy"></div>
           <div class="team-card__body">
             <h3 class="team-card__name">Brooklyn Brolly</h3>
             <p class="team-card__role">Registered Massage Therapist</p>
@@ -238,7 +245,7 @@
           </div>
         </a>
         <a href="/our-team/lindsey-stauffer.html" class="team-card">
-          <div class="team-card__image img-placeholder">Photo</div>
+          <div class="team-card__image"><img src="/images/team/lindsey-stauffer.jpg" alt="Lindsey Stauffer portrait" loading="lazy"></div>
           <div class="team-card__body">
             <h3 class="team-card__name">Lindsey Stauffer</h3>
             <p class="team-card__role">Registered Massage Therapist</p>
@@ -247,7 +254,7 @@
           </div>
         </a>
         <a href="/our-team/meagan-brown.html" class="team-card">
-          <div class="team-card__image img-placeholder">Photo</div>
+          <div class="team-card__image"><img src="/images/team/meagan-brown.jpg" alt="Meagan Brown portrait" loading="lazy"></div>
           <div class="team-card__body">
             <h3 class="team-card__name">Meagan Brown</h3>
             <p class="team-card__role">Registered Massage Therapist</p>
@@ -256,7 +263,7 @@
           </div>
         </a>
         <a href="/our-team/charlotte-tooth.html" class="team-card">
-          <div class="team-card__image img-placeholder">Photo</div>
+          <div class="team-card__image"><img src="/images/team/charlotte-tooth.jpg" alt="Charlotte Tooth portrait" loading="lazy"></div>
           <div class="team-card__body">
             <h3 class="team-card__name">Charlotte Tooth</h3>
             <p class="team-card__role">Registered Massage Therapist</p>
@@ -277,7 +284,7 @@
       <div class="grid grid-2" style="align-items: center;">
         <div>
           <h2>Visit Us</h2>
-          <p><strong>Maximum Health Wellness Centre</strong></p>
+          <p><strong>Maximum Health Massage Therapy Calgary</strong></p>
           <p>213 19 St NW #4<br>Calgary, AB T2N 2H9</p>
           <p><strong>Phone:</strong> <a href="tel:4032830725" style="color: var(--color-primary);">(403) 283-0725</a></p>
           <div style="margin-top: var(--spacing-xl);">
@@ -291,9 +298,7 @@
           <p style="margin-top: var(--spacing-md); color: var(--color-text-light); font-size: var(--font-size-sm);">Located in NW Calgary, near Kensington. Free parking available.</p>
           <a href="/contact/" class="btn btn--primary" style="margin-top: var(--spacing-lg);">Get Directions</a>
         </div>
-        <div class="img-placeholder" style="aspect-ratio: 4/3; border-radius: var(--radius-lg);">
-          Map / Location Photo
-        </div>
+        <div style="aspect-ratio: 4/3; border-radius: var(--radius-lg); overflow: hidden;"><a href="https://maps.google.com/?q=213+19+St+NW+Calgary" target="_blank" rel="noopener"><img src="/images/location-map.png" alt="Map showing Maximum Health Massage Therapy Calgary at 213 19 St NW #4, Calgary" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy"></a></div>
       </div>
     </div>
   </section>
@@ -351,7 +356,7 @@
         </div>
       </div>
       <div class="footer__bottom">
-        <p>&copy; 2025 Maximum Health Wellness Centre. All rights reserved.</p>
+        <p>&copy; 2025 Maximum Health Massage Therapy Calgary. All rights reserved.</p>
         <div class="footer__social">
           <a href="#" aria-label="Facebook">Facebook</a>
           <a href="#" aria-label="Instagram">Instagram</a>
