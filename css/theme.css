@@ -670,6 +670,14 @@ a:hover { color: var(--color-primary-dark); }
   margin: 0.85rem auto 1.25rem;
 }
 
+/* Team cards inside dark sections — ensure text is visible */
+.section--dark .team-card {
+  background: var(--color-white);
+}
+.section--dark .team-card__name {
+  color: var(--color-heading);
+}
+
 @media (max-width: 768px) {
   .trust-bar { grid-template-columns: repeat(2, 1fr); }
   .process-steps { grid-template-columns: 1fr; }
