@@ -80,10 +80,10 @@ a:hover { color: var(--color-primary-dark); }
 .nav__link {
   font-family: var(--font-body);
   font-weight: 600;
-  font-size: 0.85rem;
+  font-size: 1.275rem;
   color: var(--color-heading);
   letter-spacing: 0.01em;
-  padding: 0.4rem 0.6rem;
+  padding: 0.6rem 0.9rem;
   white-space: nowrap;
 }
 .logo { font-size: 1.4rem; display: inline-flex; align-items: center; }
@@ -146,6 +146,7 @@ a:hover { color: var(--color-primary-dark); }
 .btn--white:hover { background: var(--color-bg-alt); transform: translateY(-2px); }
 .btn--lg { padding: 1rem 2.25rem; font-size: 0.95rem; }
 .btn--sm { padding: 0.6rem 1.25rem; font-size: 0.8rem; }
+.header__cta.btn--sm { padding: 0.9rem 1.875rem; font-size: 1.2rem; }
 .header__cta {
   background: var(--color-secondary);
   color: var(--color-white) !important;
