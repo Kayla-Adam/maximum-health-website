@@ -67,10 +67,11 @@
 /* Cards */
 .card {
   background: var(--color-bg);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
+  border-radius: var(--radius-sm);
+  overflow: visible;
   box-shadow: var(--shadow-sm);
   transition: all var(--transition);
+  padding: var(--spacing-xl);
 }
 
 .card:hover {
