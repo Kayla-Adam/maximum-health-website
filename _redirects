@@ -1,0 +1,51 @@
+# 301 Redirects - Old Wix URLs to New Site URLs
+
+# Main pages
+/about-6 /about-us/ 301
+/copy-of-contact /join-our-team/ 301
+/copy-of-contact-1 /contact/ 301
+
+# Service pages
+/registered-massage-therapy /services/ 301
+/traditionalchinesemedicine /services/traditional-chinese-medicine 301
+/osteopathy /services/osteopathy 301
+/copy-of-deep-tissue-massage /services/deep-tissue-therapeutic 301
+/copy-of-myofascial-release /services/myofascial-release 301
+/copy-of-mindful-massage /services/mindful-massage 301
+/copy-of-sports-injury-and-rehabilitat /services/sports-injury-rehabilitation 301
+/copy-of-prenatal-massage /services/pre-post-natal 301
+/general-7 /services/deep-tissue-therapeutic 301
+
+# Removed services → services hub
+/alignment-therapy /services/ 301
+/cosmetic-therapy /services/ 301
+/rapid /services/ 301
+/energy-healing /services/ 301
+
+# Products → homepage (no longer offered)
+/products / 301
+/osmosis-products / 301
+/packages-1 /services/ 301
+
+# Alternate homepages
+/copy-of-home / 301
+/copy-2-of-home / 301
+
+# Team member pages
+/brookelynbrolly /our-team/brooklyn-brolly 301
+/lindseystauffer /our-team/lindsey-stauffer 301
+/meaganbrown /our-team/meagan-brown 301
+/charlotte-tooth /our-team/charlotte-tooth 301
+/lauraconncraig /our-team/laura-conn-craig 301
+/tif-henderson /our-team/tifila-henderson 301
+/tracy-schneider-steeves /our-team/tracy-schneider-steeves 301
+/kassandra-wilson /our-team/kassandra-wilson 301
+/melissa-wecker /our-team/melissa-wecker 301
+/mikeviani /our-team/mike-viani 301
+
+# Former team members → team page
+/willow-blacker /our-team/ 301
+/maelagasiglia /our-team/ 301
+
+# Old blog posts → blog page
+/single-post/* /blog/ 301
