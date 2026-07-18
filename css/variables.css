@@ -3,8 +3,6 @@
    Phase 2 design variants override these values
    ============================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Noticia+Text:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@300;400;500;600;700&display=swap');
-
 :root {
   /* Colors */
   --color-primary: #2c5f2d;
