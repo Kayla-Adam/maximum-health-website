@@ -1,3 +1,19 @@
+/* === Self-hosted fonts === */
+@font-face { font-family: 'Cormorant Garamond'; font-style: normal; font-weight: 400; font-display: swap; src: url(/fonts/cormorant-400.woff2) format('woff2'); }
+@font-face { font-family: 'Cormorant Garamond'; font-style: normal; font-weight: 500; font-display: swap; src: url(/fonts/cormorant-500.woff2) format('woff2'); }
+@font-face { font-family: 'Cormorant Garamond'; font-style: normal; font-weight: 600; font-display: swap; src: url(/fonts/cormorant-600.woff2) format('woff2'); }
+@font-face { font-family: 'Cormorant Garamond'; font-style: normal; font-weight: 700; font-display: swap; src: url(/fonts/cormorant-700.woff2) format('woff2'); }
+@font-face { font-family: 'Cormorant Garamond'; font-style: italic; font-weight: 400; font-display: swap; src: url(/fonts/cormorant-400i.woff2) format('woff2'); }
+@font-face { font-family: 'Dancing Script'; font-style: normal; font-weight: 500; font-display: swap; src: url(/fonts/dancing-500.woff2) format('woff2'); }
+@font-face { font-family: 'Dancing Script'; font-style: normal; font-weight: 600; font-display: swap; src: url(/fonts/dancing-600.woff2) format('woff2'); }
+@font-face { font-family: 'Dancing Script'; font-style: normal; font-weight: 700; font-display: swap; src: url(/fonts/dancing-700.woff2) format('woff2'); }
+@font-face { font-family: 'Nunito Sans'; font-style: normal; font-weight: 300; font-display: swap; src: url(/fonts/nunito-300.woff2) format('woff2'); }
+@font-face { font-family: 'Nunito Sans'; font-style: normal; font-weight: 400; font-display: swap; src: url(/fonts/nunito-400.woff2) format('woff2'); }
+@font-face { font-family: 'Nunito Sans'; font-style: normal; font-weight: 500; font-display: swap; src: url(/fonts/nunito-500.woff2) format('woff2'); }
+@font-face { font-family: 'Nunito Sans'; font-style: normal; font-weight: 600; font-display: swap; src: url(/fonts/nunito-600.woff2) format('woff2'); }
+@font-face { font-family: 'Nunito Sans'; font-style: normal; font-weight: 700; font-display: swap; src: url(/fonts/nunito-700.woff2) format('woff2'); }
+@font-face { font-family: 'Nunito Sans'; font-style: normal; font-weight: 800; font-display: swap; src: url(/fonts/nunito-800.woff2) format('woff2'); }
+
 /* === css/variables.css === */
 /* ============================================
    CSS Custom Properties — Theming Layer
