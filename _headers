@@ -1,12 +1,11 @@
 # Cache-Control for Cloudflare Pages
-# NOTE: HTML edge-caching also needs a zone-level Cache Rule (dashboard →
+# NOTE 1: HTML edge-caching also needs a zone-level Cache Rule (dashboard →
 # Caching → Cache Rules). A Cache-Control header alone leaves extensionless
 # HTML as cf-cache-status: DYNAMIC. See page-speed playbook §6a.
-
-# Default (HTML pages): browsers always revalidate; edge may serve for 10 min
-# once a Cache Rule marks these eligible. stale-while-revalidate hides refetch.
-/*
-  Cache-Control: public, max-age=0, s-maxage=600, stale-while-revalidate=86400
+# NOTE 2: Cloudflare Pages COMBINES the Cache-Control of every matching rule
+# (it does not let the most-specific win). Browsers honour the FIRST max-age,
+# so the specific asset rules are listed BEFORE the catch-all /* — that way an
+# asset's own max-age wins, while HTML (only matched by /*) stays clean.
 
 # Fonts — stable filenames, safe to cache hard.
 /fonts/*
@@ -22,3 +21,8 @@
 
 /js/*
   Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+
+# HTML pages (catch-all, listed LAST): browsers always revalidate; edge serves
+# for 10 min once the Cache Rule marks these eligible. SWR hides the refetch.
+/*
+  Cache-Control: public, max-age=0, s-maxage=600, stale-while-revalidate=86400
