@@ -1,18 +1,13 @@
-/* === Self-hosted fonts === */
-@font-face { font-family: 'Cormorant Garamond'; font-style: normal; font-weight: 400; font-display: swap; src: url(/fonts/cormorant-400.woff2) format('woff2'); }
-@font-face { font-family: 'Cormorant Garamond'; font-style: normal; font-weight: 500; font-display: swap; src: url(/fonts/cormorant-500.woff2) format('woff2'); }
-@font-face { font-family: 'Cormorant Garamond'; font-style: normal; font-weight: 600; font-display: swap; src: url(/fonts/cormorant-600.woff2) format('woff2'); }
-@font-face { font-family: 'Cormorant Garamond'; font-style: normal; font-weight: 700; font-display: swap; src: url(/fonts/cormorant-700.woff2) format('woff2'); }
+/* === Self-hosted fonts — one variable file per family (weight range) === */
+@font-face { font-family: 'Cormorant Garamond'; font-style: normal; font-weight: 300 700; font-display: swap; src: url(/fonts/cormorant-400.woff2) format('woff2'); }
 @font-face { font-family: 'Cormorant Garamond'; font-style: italic; font-weight: 400; font-display: swap; src: url(/fonts/cormorant-400i.woff2) format('woff2'); }
-@font-face { font-family: 'Dancing Script'; font-style: normal; font-weight: 500; font-display: swap; src: url(/fonts/dancing-500.woff2) format('woff2'); }
-@font-face { font-family: 'Dancing Script'; font-style: normal; font-weight: 600; font-display: swap; src: url(/fonts/dancing-600.woff2) format('woff2'); }
-@font-face { font-family: 'Dancing Script'; font-style: normal; font-weight: 700; font-display: swap; src: url(/fonts/dancing-700.woff2) format('woff2'); }
-@font-face { font-family: 'Nunito Sans'; font-style: normal; font-weight: 300; font-display: swap; src: url(/fonts/nunito-300.woff2) format('woff2'); }
-@font-face { font-family: 'Nunito Sans'; font-style: normal; font-weight: 400; font-display: swap; src: url(/fonts/nunito-400.woff2) format('woff2'); }
-@font-face { font-family: 'Nunito Sans'; font-style: normal; font-weight: 500; font-display: swap; src: url(/fonts/nunito-500.woff2) format('woff2'); }
-@font-face { font-family: 'Nunito Sans'; font-style: normal; font-weight: 600; font-display: swap; src: url(/fonts/nunito-600.woff2) format('woff2'); }
-@font-face { font-family: 'Nunito Sans'; font-style: normal; font-weight: 700; font-display: swap; src: url(/fonts/nunito-700.woff2) format('woff2'); }
-@font-face { font-family: 'Nunito Sans'; font-style: normal; font-weight: 800; font-display: swap; src: url(/fonts/nunito-800.woff2) format('woff2'); }
+@font-face { font-family: 'Dancing Script'; font-style: normal; font-weight: 400 700; font-display: swap; src: url(/fonts/dancing-500.woff2) format('woff2'); }
+@font-face { font-family: 'Nunito Sans'; font-style: normal; font-weight: 200 1000; font-display: swap; src: url(/fonts/nunito-400.woff2) format('woff2'); }
+
+/* Metric-matched fallbacks — computed at ACTUAL rendered weights (freq-weighted vs Arial) to eliminate font-swap CLS */
+@font-face { font-family: 'Cormorant-fallback'; src: local('Arial'); size-adjust: 88.89%; ascent-override: 103.95%; descent-override: 32.29%; line-gap-override: 0%; }
+@font-face { font-family: 'Nunito-fallback'; src: local('Arial'); size-adjust: 101.93%; ascent-override: 99.19%; descent-override: 34.63%; line-gap-override: 0%; }
+@font-face { font-family: 'Dancing-fallback'; src: local('Arial'); size-adjust: 81.43%; ascent-override: 112.98%; descent-override: 34.39%; line-gap-override: 0%; }
 
 /* === css/variables.css === */
 /* ============================================
@@ -1639,9 +1634,9 @@ hr {
   --color-black: #2f4e47;
   --color-star: #f0b95a;
 
-  --font-heading: 'Cormorant Garamond', Georgia, serif;
-  --font-script: 'Dancing Script', cursive;
-  --font-body: 'Nunito Sans', 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Cormorant Garamond', 'Cormorant-fallback', Georgia, serif;
+  --font-script: 'Dancing Script', 'Dancing-fallback', cursive;
+  --font-body: 'Nunito Sans', 'Nunito-fallback', 'Segoe UI', Roboto, sans-serif;
 
   --radius-sm: 8px;
   --radius-md: 14px;
