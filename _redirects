@@ -46,6 +46,11 @@
 # Former team members → team page
 /willow-blacker /our-team/ 301
 /maelagasiglia /our-team/ 301
+/eunice-mooney /our-team/ 301
+
+# Old promo/blog pages still in Google's index → relevant new pages
+/knotty-or-nice /services/ 301
+/knottyornice /services/ 301
 
 # Old blog posts → blog page
 /single-post/* /blog/ 301
