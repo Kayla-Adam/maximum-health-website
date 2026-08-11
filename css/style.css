@@ -6,7 +6,8 @@
 
 /* Metric-matched fallbacks — computed at ACTUAL rendered weights (freq-weighted vs Arial) to eliminate font-swap CLS */
 @font-face { font-family: 'Cormorant-fallback'; src: local('Arial'); size-adjust: 88.89%; ascent-override: 103.95%; descent-override: 32.29%; line-gap-override: 0%; }
-@font-face { font-family: 'Nunito-fallback'; src: local('Arial'); size-adjust: 101.93%; ascent-override: 99.19%; descent-override: 34.63%; line-gap-override: 0%; }
+@font-face { font-family: 'Nunito-fallback'; src: local('Arial'); font-weight: 200 550; size-adjust: 101.93%; ascent-override: 99.19%; descent-override: 34.63%; line-gap-override: 0%; }
+@font-face { font-family: 'Nunito-fallback'; src: local('Arial'); font-weight: 600 1000; size-adjust: 103.77%; ascent-override: 97.43%; descent-override: 34.02%; line-gap-override: 0%; }
 @font-face { font-family: 'Dancing-fallback'; src: local('Arial'); size-adjust: 81.43%; ascent-override: 112.98%; descent-override: 34.39%; line-gap-override: 0%; }
 
 /* === css/variables.css === */
